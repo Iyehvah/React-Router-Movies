@@ -11,7 +11,7 @@ const MovieList = props => {
           setMovies(response.data);
         })
         .catch(error => {
-          console.error('Server Error', error);
+          console.error(error);
         });
     }
     
@@ -22,6 +22,7 @@ const MovieList = props => {
     <div className="movie-list">
       {movies.map(movie => (
         <MovieDetails key={movie.id} movie={movie} />
+        
       ))}
     </div>
   );
